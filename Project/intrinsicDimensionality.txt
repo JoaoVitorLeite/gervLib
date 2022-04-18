@@ -1,0 +1,11 @@
+ulcer_SPP.csv (40000) = 12 (EUCLIDEAN)
+                        12 (COSINE)
+                        12 (BRAYCURTIS)
+                        12 (TANIMOTO)
+                        12 (MATUSITA)
+                        
+ScalableColor.csv (40000) = 256 (EUCLIDEAN)
+                            256 (COSINE)
+                            256 (BRAYCURTIS)
+                            256 (TANIMOTO)
+                            7   (MATUSITA)
