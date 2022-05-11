@@ -59,34 +59,36 @@ DistanceBrowsing::DistanceBrowsing()
 bool DistanceBrowsing::isInterval(double infBound, double supBound, double test)
 {
 
-    bool ans;
+//    bool ans;
 
-    if(infBound < 0)
-    {
+//    if(infBound < 0)
+//    {
 
-        ans = (std::abs(infBound) < test) && (test <= supBound);
+//        ans = (std::abs(infBound) < test) && (test <= supBound);
 
-    }
-    else if(supBound < 0)
-    {
+//    }
+//    else if(supBound < 0)
+//    {
 
-        ans = (infBound <= test) && (test < std::abs(supBound));
+//        ans = (infBound <= test) && (test < std::abs(supBound));
 
-    }
-    else if((infBound < 0) && (supBound < 0))
-    {
+//    }
+//    else if((infBound < 0) && (supBound < 0))
+//    {
 
-        ans = (std::abs(infBound) < test) && (test < std::abs(supBound));
+//        ans = (std::abs(infBound) < test) && (test < std::abs(supBound));
 
-    }
-    else
-    {
+//    }
+//    else
+//    {
 
-        ans = (infBound <= test) && (test <= supBound);
+//        ans = (infBound <= test) && (test <= supBound);
 
-    }
+//    }
 
-    return ans;
+//    return ans;
+
+    return ((test >= infBound) && (test <= supBound));
 
 }
 
@@ -95,45 +97,98 @@ bool DistanceBrowsing::isInterval(double infBound, double supBound, double test)
 double DistanceBrowsing::minDist(Instance* sq, std::vector<DynamicArray<double>> bounds)
 {
 
-    Instance* point = new Instance(0, sq->getSize());
+//    Instance* point = new Instance(0, sq->getSize());
+
+//    for(size_t x = 0; x < bounds.size(); x++)
+//    {
+
+//        if(isInterval(bounds[x].array[0], bounds[x].array[1], sq->get(x)))
+//        {
+
+//            //std::cout << "VALOR NO INTERVALO" << std::endl;
+//            point->set(x, sq->get(x));
+
+//        }
+//        else
+//        {
+
+//            double infBoundaryRegion = std::abs(std::abs(bounds[x].array[0]) - sq->get(x)),
+//                    supBoundaryRegion = std::abs(std::abs(bounds[x].array[1]) - sq->get(x));
+
+//            //std::cout << "INF BOUNDARY REGION = " << infBoundaryRegion << std::endl;
+//            //std::cout << "SUP BOUNDARY REGION = " << supBoundaryRegion << std::endl;
+
+//            if(infBoundaryRegion <= supBoundaryRegion)
+//            {
+
+//                point->set(x, std::abs(bounds[x].array[0]));
+
+//            }
+//            else
+//            {
+
+//                point->set(x, std::abs(bounds[x].array[1]));
+
+//            }
+
+//        }
+
+//        //std::cout << "\n\n";
+
+//    }
+
+//    double ans =  df->getDistance(*point, *sq);
+
+//    delete point;
+
+//    return ans;
+
+    double answer = -1.0;
+    double candidateV;
+    Instance* limTeorico = new Instance(0, bounds.size());
+
+    bool within = true;
 
     for(size_t x = 0; x < bounds.size(); x++)
     {
 
-        if(isInterval(bounds[x].array[0], bounds[x].array[1], sq->get(x)))
+        candidateV = std::numeric_limits<double>::max();
+
+        if(!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x)))
         {
 
-            point->set(x, sq->get(x));
+            within = false;
+
+            candidateV = std::min(candidateV, std::abs(sq->get(x) - std::abs(bounds[x].array[0])));
+            candidateV = std::min(candidateV, std::abs(sq->get(x) - std::abs(bounds[x].array[1])));
 
         }
         else
         {
 
-            double infBoundaryRegion = std::abs(std::abs(bounds[x].array[0]) - sq->get(x)),
-                    supBoundaryRegion = std::abs(std::abs(bounds[x].array[1]) - sq->get(x));
-
-            if(infBoundaryRegion <= supBoundaryRegion)
-            {
-
-                point->set(x, std::abs(bounds[x].array[0]));
-
-            }
-            else
-            {
-
-                point->set(x, std::abs(bounds[x].array[1]));
-
-            }
+            candidateV = sq->get(x);
 
         }
 
+        limTeorico->set(x, candidateV);
+
     }
 
-    double ans =  df->getDistance(*point, *sq);
+    if (within)
+    {
 
-    delete point;
+        answer = 0.0;
 
-    return ans;;
+    }
+    else
+    {
+
+        answer = df->getDistance(*sq, *limTeorico);
+
+    }
+
+
+    return answer;
 
 }
 
@@ -142,45 +197,93 @@ double DistanceBrowsing::minDist(Instance* sq, std::vector<DynamicArray<double>>
 double DistanceBrowsing::maxDist(Instance* sq, std::vector<DynamicArray<double>> bounds)
 {
 
-    Instance* point = new Instance(0, sq->getSize());
+//    Instance* point = new Instance(0, sq->getSize());
+
+//    for(size_t x = 0; x < bounds.size(); x++)
+//    {
+
+//        if(isInterval(bounds[x].array[0], bounds[x].array[1], sq->get(x)))
+//        {
+
+//            point->set(x, sq->get(x));
+
+//        }
+//        else
+//        {
+
+//            double infBoundaryRegion = std::abs(bounds[x].array[0]) + sq->get(x),
+//                    supBoundaryRegion = std::abs(bounds[x].array[1]) + sq->get(x);
+
+//            if(infBoundaryRegion <= supBoundaryRegion)
+//            {
+
+//                point->set(x, std::abs(bounds[x].array[0]));
+
+//            }
+//            else
+//            {
+
+//                point->set(x, std::abs(bounds[x].array[1]));
+
+//            }
+
+//        }
+
+//    }
+
+//    double ans =  df->getDistance(*point, *sq);
+
+//    delete point;
+
+//    return ans;
+
+    double answer = -1.0;
+    double candidateV;
+    Instance* limTeorico = new Instance(0, bounds.size());
+
+    bool within = true;
 
     for(size_t x = 0; x < bounds.size(); x++)
     {
 
-        if(isInterval(bounds[x].array[0], bounds[x].array[1], sq->get(x)))
+        candidateV = std::numeric_limits<double>::max();
+
+        if(!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x)))
         {
 
-            point->set(x, sq->get(x));
+            within = false;
+
+            candidateV = std::min(candidateV, sq->get(x) + std::abs(bounds[x].array[0]));
+            candidateV = std::min(candidateV, sq->get(x) + std::abs(bounds[x].array[1]));
 
         }
         else
         {
 
-            double infBoundaryRegion = std::abs(bounds[x].array[0]) + sq->get(x),
-                    supBoundaryRegion = std::abs(bounds[x].array[1]) + sq->get(x);
-
-            if(infBoundaryRegion <= supBoundaryRegion)
-            {
-
-                point->set(x, std::abs(bounds[x].array[0]));
-
-            }
-            else
-            {
-
-                point->set(x, std::abs(bounds[x].array[1]));
-
-            }
+            candidateV = sq->get(x);
 
         }
 
+        limTeorico->set(x, candidateV);
+
     }
 
-    double ans =  df->getDistance(*point, *sq);
+    if (within)
+    {
 
-    delete point;
+        answer = 0.0;
 
-    return ans;
+    }
+    else
+    {
+
+        answer = df->getDistance(*sq, *limTeorico);
+
+    }
+
+
+    return answer;
+
 
 }
 

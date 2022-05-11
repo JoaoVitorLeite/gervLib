@@ -1,6 +1,7 @@
 #ifndef OMNIKDTREE_H
 #define OMNIKDTREE_H
 
+#include <algorithm>
 #include <KdTree.h>
 #include <Index.h>
 #include <fstream>
@@ -18,6 +19,7 @@ class OmniKdTree: public Index
         Pivot* pivot;
         DistanceFunction<Instance>* df;
         Dataset* laesaMatrix;
+        Dataset* datasetOriginal;
 
         //Private methods
         void resetDiskAccess();
@@ -232,35 +234,39 @@ template<class Dtype>
 TupleResult OmniKdTree<Dtype>::calculateV1V2(Instance* sq_, Instance* inst)
 {
 
-    double ansV1 = std::numeric_limits<double>::max(), ansV2 = std::numeric_limits<double>::max(), inf = 0, sup = 0;
+    double ansV1 = df->getDistance(*datasetOriginal->getInstance(sq_->getOID()), *datasetOriginal->getInstance(inst->getOID()));
+    double ansV2 = ansV1;
+//    double ansV1 = std::numeric_limits<double>::max(), ansV2 = std::numeric_limits<double>::max(), inf = 0, sup = 0;
 
-    for(size_t x = 0; x < inst->size(); x++)
-    {
+//    for(size_t x = 0; x < inst->size(); x++)
+//    {
 
-        inf = std::abs(sq_->get(x) - laesaMatrix->getInstance(inst->getOID())->get(x));
-        sup = sq_->get(x) + laesaMatrix->getInstance(inst->getOID())->get(x);
+//        inf = std::abs(sq_->get(x) - laesaMatrix->getInstance(inst->getOID())->get(x));
+//        sup = sq_->get(x) + laesaMatrix->getInstance(inst->getOID())->get(x);
 
-        if(inf < ansV1 && sup < ansV2)
-        {
+//        if(inf < ansV1 && sup < ansV2)
+//        {
 
-            ansV1 = inf;
-            ansV2 = sup;
+//            ansV1 = inf;
+//            ansV2 = sup;
 
-        }
-        else if(inf < ansV1)
-        {
+//        }
+//        else if(inf < ansV1)
+//        {
 
-            ansV1 = inf;
+//            ansV1 = inf;
 
-        }
-        else if(sup < ansV2)
-        {
+//        }
+//        else if(sup < ansV2)
+//        {
 
-            ansV2 = sup;
+//            ansV2 = sup;
 
-        }
+//        }
 
-    }
+//    }
+
+
 
     return TupleResult(inst->getOID(), ansV1, ansV2);
 
@@ -421,137 +427,332 @@ template <class Dtype>
 void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vector<PairResult> & ans)
 {
 
+//    resetDiskAccess();
+//    tree->resetDistanceCount();
+//    datasetOriginal = train;
+
+//    DistanceBrowsing* distanceBrowsing = new DistanceBrowsing(df);
+//    std::priority_queue<Partition<Dtype>, std::vector<Partition<Dtype>>, ComparePartition<Dtype>> pqPartition;
+//    std::priority_queue<TupleResult, std::vector<TupleResult>, CompareTupleResult> pqResult;
+//    Instance* sq_ = pivotCoordinates(query);
+//    sq_->setOID(query->getOID()); //OBS
+//    double radius = std::numeric_limits<double>::max();
+//    pqPartition.push(Partition<Dtype>(tree->getRoot(), 0.0, 0.0));
+
+//    while(!pqPartition.empty() || )
+//    {
+
+//        Node<Dtype>* node = pqPartition.top().node;
+//        pqPartition.pop();
+
+//        if(node->isDirectoryNode())
+//        {
+
+//            double minL = distanceBrowsing->minDist(sq_, node->getLeft()->getBoundary());
+//            double maxL = distanceBrowsing->maxDist(sq_, node->getLeft()->getBoundary());
+//            double minR = distanceBrowsing->minDist(sq_, node->getRight()->getBoundary());
+//            double maxR = distanceBrowsing->maxDist(sq_, node->getRight()->getBoundary());
+
+//            pqPartition.push(Partition<Dtype>(node->getLeft(), minL, maxL));
+//            pqPartition.push(Partition<Dtype>(node->getRight(), minR, maxR));
+
+//        }
+//        else
+//        {
+
+//            Dataset* dataLeafNode = readLeafNode((LeafNode<Dtype>*)node);
+//            incrementDiskAccess();
+
+//            std::cout << "ID LEAF NODE = " << node->getNodeID() << std::endl;
+
+//            for(size_t x = 0; x < dataLeafNode->getCardinality(); x++)
+//            {
+
+//                insertPriorityQueueResult(calculateV1V2(sq_, dataLeafNode->getInstance(x)), pqResult, k, radius);
+
+//            }
+
+//            delete dataLeafNode;
+
+//        }
+
+//    }
+
+//    std::vector<TupleResult> orderByV1 = dequeueInOrder<TupleResult, CompareTupleResult>(pqResult);
+
+//    std::sort(orderByV1.begin(), orderByV1.end(), [](TupleResult const& a, TupleResult const& b){
+
+//        return a.value1 > b.value1;
+
+//    });
+
+//    std::priority_queue<PairResult, std::vector<PairResult>, ComparePairResult> pqAns;
+
+//    size_t i = 0;
+
+//    while(i != orderByV1.size())
+//    {
+
+//        TupleResult pop = orderByV1[i];
+
+//        if(pop.value1 <= radius)
+//        {
+
+//            double dist = df->getDistance(*query, *train->getInstance(pop.index));
+
+//            if(dist <= radius)
+//            {
+
+//                if(pqAns.size() == k)
+//                {
+
+//                    pqAns.push(PairResult(train->getInstance(pop.index)->getOID(), dist));
+//                    std::vector<PairResult> aux = dequeueInOrder<PairResult, ComparePairResult>(pqAns);
+//                    radius = aux[k-1].distance;
+
+//                    pqAns = std::priority_queue<PairResult, std::vector<PairResult>, ComparePairResult>();
+
+//                    for(size_t x = 0; x < k; x++)
+//                    {
+
+//                        pqAns.push(aux[x]);
+
+//                    }
+
+//                }
+//                else
+//                {
+
+//                    pqAns.push(PairResult(train->getInstance(pop.index)->getOID(), dist));
+
+//                    if(pqAns.size() == k)
+//                    {
+
+//                        std::vector<PairResult> aux = dequeueInOrder<PairResult, ComparePairResult>(pqAns);
+//                        radius = aux[k-1].distance;
+
+//                        pqAns = std::priority_queue<PairResult, std::vector<PairResult>, ComparePairResult>();
+
+//                        for(size_t x = 0; x < k; x++)
+//                        {
+
+//                            pqAns.push(aux[x]);
+
+//                        }
+
+//                    }
+
+//                }
+
+//            }
+
+//        }
+
+//        i++;
+
+//    }
+
+//    ans = dequeueInOrder<PairResult, ComparePairResult>(pqAns);
+//    ans.resize(k);
+
+
+//    orderByV1.clear();
+
+//    while(!pqResult.empty())
+//    {
+
+//        pqResult.pop();
+
+//    }
+
     resetDiskAccess();
     tree->resetDistanceCount();
 
     DistanceBrowsing* distanceBrowsing = new DistanceBrowsing(df);
     std::priority_queue<Partition<Dtype>, std::vector<Partition<Dtype>>, ComparePartition<Dtype>> pqPartition;
-    std::priority_queue<TupleResult, std::vector<TupleResult>, CompareTupleResult> pqResult;
+    std::priority_queue<PairResult, std::vector<PairResult>, ComparePairResult> pqCandidates;
+    std::priority_queue<PairResult, std::vector<PairResult>, ComparePairResult2> pqAns;
     Instance* sq_ = pivotCoordinates(query);
-    double radius = std::numeric_limits<double>::max();
     pqPartition.push(Partition<Dtype>(tree->getRoot(), 0.0, 0.0));
+    Node<Dtype>* node = nullptr;
+    Partition<Dtype> partition;
 
-    while(!pqPartition.empty())
+    std::cout << sq_->toString() << "\n\n";
+
+    int i = 0;
+
+    while(!pqPartition.empty() || pqCandidates.size() > 0)
     {
 
-        Node<Dtype>* node = pqPartition.top().node;
-        pqPartition.pop();
+        std::cout << "\n\n-------------------ITERACAO WHILE " << i << "\n\n";
 
-        if(node->isDirectoryNode())
+        std::cout << "PARTITION MIN = " << pqPartition.top().min << std::endl;
+        std::cout << "DIST (query, pqCandidates.top) = " << (pqCandidates.empty() ? -1 : df->getDistance(*query, *train->getInstance(pqCandidates.top().index))) << std::endl;
+
+        if(pqCandidates.size() == 0)
         {
 
-            double minL = distanceBrowsing->minDist(sq_, node->getLeft()->getBoundary());
-            double maxL = distanceBrowsing->maxDist(sq_, node->getLeft()->getBoundary());
-            double minR = distanceBrowsing->minDist(sq_, node->getRight()->getBoundary());
-            double maxR = distanceBrowsing->maxDist(sq_, node->getRight()->getBoundary());
+            partition = pqPartition.top();
+            node = partition.node;
+            pqPartition.pop();
 
-            pqPartition.push(Partition<Dtype>(node->getLeft(), minL, maxL));
-            pqPartition.push(Partition<Dtype>(node->getRight(), minR, maxR));
+            std::cout << "POP NODE ID = " << node->getNodeID() << "\n\n";
+
+            if(node->isLeafNode())
+            {
+
+                Dataset* dataLeafNode = readLeafNode((LeafNode<Dtype>*)node);
+                incrementDiskAccess();
+
+                std::cout << "ID LEAF NODE = " << node->getNodeID() << std::endl;
+
+                for(size_t x = 0; x < dataLeafNode->getCardinality(); x++)
+                {
+
+                    std::cout << dataLeafNode->getInstance(x)->getOID() << " / " << df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID())) << std::endl;
+                    pqCandidates.push(PairResult(dataLeafNode->getInstance(x)->getOID(), df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID()))));
+
+                }
+
+                delete dataLeafNode;
+
+            }
+            else
+            {
+
+                std::cout << "\nDIST BR = " << node->getLeft()->getNodeID() << " / " << node->getLeft()->showBounds() << std::endl;
+                double minL = distanceBrowsing->minDist(sq_, node->getLeft()->getBoundary());
+                double maxL = distanceBrowsing->maxDist(sq_, node->getLeft()->getBoundary());
+                std::cout << "DIST BR = " << node->getRight()->getNodeID() << " / " << node->getRight()->showBounds() << std::endl;
+                double minR = distanceBrowsing->minDist(sq_, node->getRight()->getBoundary());
+                double maxR = distanceBrowsing->maxDist(sq_, node->getRight()->getBoundary());
+
+                std::cout << "DIR = " << node->getLeft()->getNodeID() << " / " << minL << " / " << maxL << std::endl;
+                std::cout << "DIR = " << node->getRight()->getNodeID() << " / " << minR << " / " << maxR << std::endl;
+                pqPartition.push(Partition<Dtype>(node->getLeft(), minL, maxL));
+                pqPartition.push(Partition<Dtype>(node->getRight(), minR, maxR));
+
+            }
+
+        }
+        else if((pqPartition.size() > 0) && pqPartition.top().min < df->getDistance(*query, *train->getInstance(pqCandidates.top().index)))
+        {
+
+            node = pqPartition.top().node;
+            pqPartition.pop();
+
+            std::cout << "POP NODE ID = " << node->getNodeID() << std::endl;
+
+            if(node->isLeafNode())
+            {
+
+                Dataset* dataLeafNode = readLeafNode((LeafNode<Dtype>*)node);
+                incrementDiskAccess();
+
+                std::cout << "ID LEAF NODE = " << node->getNodeID() << std::endl;
+
+                for(size_t x = 0; x < dataLeafNode->getCardinality(); x++)
+                {
+
+                    std::cout << dataLeafNode->getInstance(x)->getOID() << " / " << df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID())) << std::endl;
+                    pqCandidates.push(PairResult(dataLeafNode->getInstance(x)->getOID(), df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID()))));
+
+                }
+
+                delete dataLeafNode;
+
+            }
+            else
+            {
+
+                std::cout << "\nDIST BR = " << node->getLeft()->getNodeID() << " / " << node->getLeft()->showBounds() << std::endl;
+                double minL = distanceBrowsing->minDist(sq_, node->getLeft()->getBoundary());
+                double maxL = distanceBrowsing->maxDist(sq_, node->getLeft()->getBoundary());
+                std::cout << "DIST BR = " << node->getRight()->getNodeID() << " / " << node->getRight()->showBounds() << std::endl;
+                double minR = distanceBrowsing->minDist(sq_, node->getRight()->getBoundary());
+                double maxR = distanceBrowsing->maxDist(sq_, node->getRight()->getBoundary());
+
+                std::cout << "DIR = " << node->getLeft()->getNodeID() << " / " << minL << " / " << maxL << std::endl;
+                std::cout << "DIR = " << node->getRight()->getNodeID() << " / " << minR << " / " << maxR << std::endl;
+                pqPartition.push(Partition<Dtype>(node->getLeft(), minL, maxL));
+                pqPartition.push(Partition<Dtype>(node->getRight(), minR, maxR));
+
+            }
 
         }
         else
         {
 
-            Dataset* dataLeafNode = readLeafNode((LeafNode<Dtype>*)node);
-            incrementDiskAccess();
-
-            for(size_t x = 0; x < dataLeafNode->getCardinality(); x++)
+            std::cout << "ADICIONA ELEMENTO NA RESPOSTA" << std::endl;
+            if(!pqAns.empty() && !pqCandidates.empty() && pqAns.size() >= k && pqCandidates.top().distance > pqAns.top().distance)
             {
 
-                insertPriorityQueueResult(calculateV1V2(sq_, dataLeafNode->getInstance(x)), pqResult, k, radius);
+                std::cout << "DEVERIA TERMINAR AQUI";
+                //break;
 
             }
 
-            delete dataLeafNode;
+            pqAns.push(pqCandidates.top());
+            pqCandidates.pop();
+
+            while(pqAns.size() > k)
+            {
+
+                pqAns.pop();
+
+            }
 
         }
 
-    }
-
-    std::vector<TupleResult> orderByV1 = dequeueInOrder<TupleResult, CompareTupleResult>(pqResult);
-
-    std::sort(orderByV1.begin(), orderByV1.end(), [](TupleResult const& a, TupleResult const& b){
-
-        return a.value1 > b.value1;
-
-    });
-
-    std::priority_queue<PairResult, std::vector<PairResult>, ComparePairResult> pqAns;
-
-    size_t i = 0;
-
-    while(i != orderByV1.size())
-    {
-
-        TupleResult pop = orderByV1[i];
-
-        if(pop.value1 <= radius)
+        std::cout << "\nPQ PARTITION = ";
+        for(Partition pt : dequeueInOrder(pqPartition))
         {
 
-            double dist = df->getDistance(*query, *train->getInstance(pop.index));
-
-            if(dist <= radius)
-            {
-
-                if(pqAns.size() == k)
-                {
-
-                    pqAns.push(PairResult(train->getInstance(pop.index)->getOID(), dist));
-                    std::vector<PairResult> aux = dequeueInOrder<PairResult, ComparePairResult>(pqAns);
-                    radius = aux[k-1].distance;
-
-                    pqAns = std::priority_queue<PairResult, std::vector<PairResult>, ComparePairResult>();
-
-                    for(size_t x = 0; x < k; x++)
-                    {
-
-                        pqAns.push(aux[x]);
-
-                    }
-
-                }
-                else
-                {
-
-                    pqAns.push(PairResult(train->getInstance(pop.index)->getOID(), dist));
-
-                    if(pqAns.size() == k)
-                    {
-
-                        std::vector<PairResult> aux = dequeueInOrder<PairResult, ComparePairResult>(pqAns);
-                        radius = aux[k-1].distance;
-
-                        pqAns = std::priority_queue<PairResult, std::vector<PairResult>, ComparePairResult>();
-
-                        for(size_t x = 0; x < k; x++)
-                        {
-
-                            pqAns.push(aux[x]);
-
-                        }
-
-                    }
-
-                }
-
-            }
+            std::cout << pt.node->getNodeID() << ",";
 
         }
 
+        std::cout << "\nPQ CANDIDATES = ";
+        for(PairResult pt : dequeueInOrder(pqCandidates))
+        {
+
+            std::cout << pt.index << ",";
+
+        }
+
+        std::cout << "\nPQ ANS = ";
+        for(PairResult pt : dequeueInOrder(pqAns))
+        {
+
+            std::cout << pt.index << ",";
+
+        }
+
+
         i++;
+    }
+
+    ans = dequeueInOrder(pqAns);
+    std::reverse(ans.begin(), ans.end());
+
+    while(!pqCandidates.empty())
+    {
+
+        pqCandidates.pop();
 
     }
 
-    ans = dequeueInOrder<PairResult, ComparePairResult>(pqAns);
-    ans.resize(k);
-
-
-    orderByV1.clear();
-
-    while(!pqResult.empty())
+    while(!pqAns.empty())
     {
 
-        pqResult.pop();
+        pqAns.pop();
+
+    }
+
+    while(!pqPartition.empty())
+    {
+
+        pqPartition.pop();
 
     }
 

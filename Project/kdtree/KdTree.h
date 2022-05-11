@@ -34,6 +34,13 @@ struct Partition
 
     }
 
+    Partition()
+    {
+
+
+
+    }
+
 };
 
 template<class Dtype>
@@ -48,13 +55,13 @@ struct ComparePartition
         if(a.min != b.min)
         {
 
-            ans = a.min > a.max;
+            ans = a.min > b.min;
 
         }
         else
         {
 
-            ans = a.max < a.min;
+            ans = a.max > b.max;
 
         }
 
@@ -123,6 +130,18 @@ struct ComparePairResult
     {
 
         return a.distance > b.distance;
+
+    }
+
+};
+
+struct ComparePairResult2
+{
+
+    bool operator()(PairResult const& a, PairResult const& b)
+    {
+
+        return a.distance < b.distance;
 
     }
 

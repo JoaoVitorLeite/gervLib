@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 5.82.0, 2022-04-18T11:22:14. -->
+<!-- Written by QtCreator 5.82.0, 2022-05-11T08:46:38. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -67,212 +67,7 @@
     <value type="bool" key="AutoTest.Framework.QtQuickTest">true</value>
     <value type="bool" key="AutoTest.Framework.QtTest">true</value>
    </valuemap>
-   <valuemap type="QVariantMap" key="AutoTest.CheckStates">
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestCompTuple.h:TestCompTuple">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestConvex.h:TestConvex">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset1.h:TestDataset1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset2.h:TestDataset2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestDataset3.h:TestDataset3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestGnat.h:TestGnat">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestKmedoids.h:TestKmedoids">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestLaesa.h:TestLaesa">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxSepareted.h:TestMaxSepareted">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestMaxVariance.h:TestMaxVariance">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestPCA.h:TestPCA">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestRandom.h:TestRandom">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSSS.h:TestSSS">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test10">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test11">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test12">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSelection.h:TestSelection">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:cleanupTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:initTestCase">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test1">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test2">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test3">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test4">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test5">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test6">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test7">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test8">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.cpp:test9">Unchecked</value>
-    <value type="Qt::CheckState" key="1@/home/joaovictor/Code/gervLib/Project/UnitTest/TestSequentialScan.h:TestSequentialScan">Unchecked</value>
-    <value type="Qt::CheckState" key="1@:Qt Test">Unchecked</value>
-   </valuemap>
+   <valuemap type="QVariantMap" key="AutoTest.CheckStates"/>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
    <valuelist type="QVariantList" key="ClangCodeModel.CustomCommandLineKey"/>
@@ -299,7 +94,7 @@
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt6.601.gcc_64_kit</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
-   <value type="qlonglong" key="ProjectExplorer.Target.ActiveRunConfiguration">1</value>
+   <value type="qlonglong" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="int" key="EnableQmlDebugging">0</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/joaovictor/Code/gervLib/Project/build-ICProject-Desktop_Qt_6_0_1_GCC_64bit-Debug</value>
@@ -440,35 +235,34 @@
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
     <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
     <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
+    <valuelist type="QVariantList" key="Analyzer.Valgrind.VisibleErrorKinds">
+     <value type="QString">0</value>
+     <value type="QString">1</value>
+     <value type="QString">2</value>
+     <value type="QString">3</value>
+     <value type="QString">4</value>
+     <value type="QString">5</value>
+     <value type="QString">6</value>
+     <value type="QString">7</value>
+     <value type="QString">8</value>
+     <value type="QString">9</value>
+     <value type="QString">10</value>
+     <value type="QString">11</value>
+     <value type="QString">12</value>
+     <value type="QString">13</value>
+     <value type="QString">14</value>
+    </valuelist>
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/joaovictor/Code/gervLib/Project/UnitTest/UnitTest.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/joaovictor/Code/gervLib/Project/UnitTest/UnitTest.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
-    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/joaovictor/Code/gervLib/Project/UnitTest</value>
    </valuemap>
-   <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.1">
-    <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
-    <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
-    <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
-    <valuelist type="QVariantList" key="CustomOutputParsers"/>
-    <value type="int" key="PE.EnvironmentAspect.Base">2</value>
-    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/joaovictor/Code/gervLib/Project/src/ProjectJoao.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/joaovictor/Code/gervLib/Project/src/ProjectJoao.pro</value>
-    <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
-    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
-    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
-    <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
-    <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/joaovictor/Code/gervLib/Project/src</value>
-   </valuemap>
-   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">2</value>
+   <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
  </data>
  <data>
