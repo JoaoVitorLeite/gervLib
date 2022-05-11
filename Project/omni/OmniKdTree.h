@@ -705,7 +705,7 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
         }
 
         std::cout << "\nPQ PARTITION = ";
-        for(Partition pt : dequeueInOrder(pqPartition))
+        for(Partition<Dtype> pt : dequeueInOrder(pqPartition))
         {
 
             std::cout << pt.node->getNodeID() << ",";

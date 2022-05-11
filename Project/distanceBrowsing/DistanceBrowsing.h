@@ -94,102 +94,57 @@ bool DistanceBrowsing::isInterval(double infBound, double supBound, double test)
 
 
 
-double DistanceBrowsing::minDist(Instance* sq, std::vector<DynamicArray<double>> bounds)
-{
+double DistanceBrowsing::minDist(Instance* sq, std::vector<DynamicArray<double>> bounds){
 
-//    Instance* point = new Instance(0, sq->getSize());
+//    double answer = -1.0;
+//    double candidateV;
+//    Instance* limTeorico = new Instance(0, bounds.size());
 
-//    for(size_t x = 0; x < bounds.size(); x++)
-//    {
+//    Instance* f = new Instance(0, bounds.size());
+//    f->set(0,0.0);
+//    f->set(1,0.0);
 
-//        if(isInterval(bounds[x].array[0], bounds[x].array[1], sq->get(x)))
-//        {
+//    bool within = true;
 
-//            //std::cout << "VALOR NO INTERVALO" << std::endl;
-//            point->set(x, sq->get(x));
+//    for(size_t x = 0; x < bounds.size(); x++){
 
+//        candidateV = std::numeric_limits<double>::max();
+
+//        if(!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x))){
+//            within = false;
+//            candidateV = std::min(candidateV, std::abs(sq->get(x) - std::abs(bounds[x].array[0])));
+//            candidateV = std::min(candidateV, std::abs(sq->get(x) - std::abs(bounds[x].array[1])));
+//        } else {
+//            candidateV = 0;
 //        }
-//        else
-//        {
-
-//            double infBoundaryRegion = std::abs(std::abs(bounds[x].array[0]) - sq->get(x)),
-//                    supBoundaryRegion = std::abs(std::abs(bounds[x].array[1]) - sq->get(x));
-
-//            //std::cout << "INF BOUNDARY REGION = " << infBoundaryRegion << std::endl;
-//            //std::cout << "SUP BOUNDARY REGION = " << supBoundaryRegion << std::endl;
-
-//            if(infBoundaryRegion <= supBoundaryRegion)
-//            {
-
-//                point->set(x, std::abs(bounds[x].array[0]));
-
-//            }
-//            else
-//            {
-
-//                point->set(x, std::abs(bounds[x].array[1]));
-
-//            }
-
-//        }
-
-//        //std::cout << "\n\n";
-
+//        limTeorico->set(x, candidateV);
 //    }
 
-//    double ans =  df->getDistance(*point, *sq);
+//    if (within) {
+//        answer = 0.0;
+//    } else {
+//        answer = df->getDistance(*f, *limTeorico);
+//    }
 
-//    delete point;
-
-//    return ans;
+//    delete (limTeorico);
+//    delete (f);
 
     double answer = -1.0;
-    double candidateV;
-    Instance* limTeorico = new Instance(0, bounds.size());
 
-    bool within = true;
+    bool within = false;
+    answer = std::numeric_limits<double>::max();
 
-    for(size_t x = 0; x < bounds.size(); x++)
-    {
-
-        candidateV = std::numeric_limits<double>::max();
-
-        if(!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x)))
-        {
-
-            within = false;
-
-            candidateV = std::min(candidateV, std::abs(sq->get(x) - std::abs(bounds[x].array[0])));
-            candidateV = std::min(candidateV, std::abs(sq->get(x) - std::abs(bounds[x].array[1])));
-
+    for(size_t x = 0; ((x < bounds.size()) && (!within)); x++){
+        if(!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x))){
+            answer = std::min(answer, std::abs(sq->get(x) - std::abs(bounds[x].array[0])));
+            answer = std::min(answer, std::abs(sq->get(x) - std::abs(bounds[x].array[1])));
+        } else {
+            answer = 0;
+            within = true;
         }
-        else
-        {
-
-            candidateV = sq->get(x);
-
-        }
-
-        limTeorico->set(x, candidateV);
-
     }
-
-    if (within)
-    {
-
-        answer = 0.0;
-
-    }
-    else
-    {
-
-        answer = df->getDistance(*sq, *limTeorico);
-
-    }
-
 
     return answer;
-
 }
 
 
@@ -238,49 +193,18 @@ double DistanceBrowsing::maxDist(Instance* sq, std::vector<DynamicArray<double>>
 //    return ans;
 
     double answer = -1.0;
-    double candidateV;
-    Instance* limTeorico = new Instance(0, bounds.size());
 
-    bool within = true;
+    answer = std::numeric_limits<double>::max();
 
-    for(size_t x = 0; x < bounds.size(); x++)
-    {
+    for(size_t x = 0; x < bounds.size(); x++){
 
-        candidateV = std::numeric_limits<double>::max();
-
-        if(!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x)))
-        {
-
-            within = false;
-
-            candidateV = std::min(candidateV, sq->get(x) + std::abs(bounds[x].array[0]));
-            candidateV = std::min(candidateV, sq->get(x) + std::abs(bounds[x].array[1]));
-
+        if (std::numeric_limits<double>::max() -  std::abs(bounds[x].array[0]) >= sq->get(x)){
+            answer = std::min(answer, sq->get(x) + std::abs(bounds[x].array[0]));
         }
-        else
-        {
-
-            candidateV = sq->get(x);
-
+        if (std::numeric_limits<double>::max() -  std::abs(bounds[x].array[1]) >= sq->get(x)){
+            answer = std::min(answer, sq->get(x) + std::abs(bounds[x].array[1]));
         }
-
-        limTeorico->set(x, candidateV);
-
     }
-
-    if (within)
-    {
-
-        answer = 0.0;
-
-    }
-    else
-    {
-
-        answer = df->getDistance(*sq, *limTeorico);
-
-    }
-
 
     return answer;
 
