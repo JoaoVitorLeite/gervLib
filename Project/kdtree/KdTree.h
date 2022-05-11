@@ -209,8 +209,8 @@ class KdTree : public Index
         //Public methods
         std::string toString();
         void knn(Dataset* train, Instance* query, size_t k, std::vector<PairResult> & ans);
-        u_char* serialize();
-        void unserialize(u_char* data);
+        u_int8_t* serialize();
+        void unserialize(u_int8_t* data);
         u_int32_t getSerializedSize();
         void saveToFile();
         void loadFromFile(std::string fileName);
@@ -1111,11 +1111,11 @@ void KdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vector<P
 
 
 template<class Dtype>
-u_char* KdTree<Dtype>::serialize()
+u_int8_t* KdTree<Dtype>::serialize()
 {
 
     setSerializeVariables();
-    u_char* data = new u_char[getSerializedSize()];
+    u_int8_t* data = new u_int8_t[getSerializedSize()];
     u_int32_t nodesSize_ = (u_int32_t)nodesSize, datasetSize_ = (u_int32_t)datasetSize, pivotSize_ = (u_int32_t)pivotSize, numberOfNodes_ = (u_int32_t)numberOfNodes, total = 0;
     PIVOT_TYPE pvt_type = pivot->getPivotType();
 
@@ -1134,7 +1134,7 @@ u_char* KdTree<Dtype>::serialize()
     queueNode.push(getRoot());
     Node<Dtype>* curr = nullptr;
     u_int32_t nodeType, nodeSize;
-    u_char* nodeData = nullptr;
+    u_int8_t* nodeData = nullptr;
 
     while(!queueNode.empty())
     {
@@ -1170,9 +1170,9 @@ u_char* KdTree<Dtype>::serialize()
 
     }
 
-    memcpy(data + total, (u_char*)laesaMatrix->serialize(), datasetSize);
+    memcpy(data + total, (u_int8_t*)laesaMatrix->serialize(), datasetSize);
     total += datasetSize;
-    memcpy(data + total, (u_char*)pivot->serialize(), pivotSize);
+    memcpy(data + total, (u_int8_t*)pivot->serialize(), pivotSize);
     total += pivotSize;
 
 
@@ -1183,7 +1183,7 @@ u_char* KdTree<Dtype>::serialize()
 
 
 template<class Dtype>
-void KdTree<Dtype>::unserialize(u_char* data)
+void KdTree<Dtype>::unserialize(u_int8_t* data)
 {
 
     u_int32_t nodesSize_ = 0, datasetSize_ = 0, pivotSize_ = 0, numberOfNodes_ = 0, total = 0;
@@ -1205,7 +1205,7 @@ void KdTree<Dtype>::unserialize(u_char* data)
     u_int32_t nodeType, nodeSize;
     std::vector<Node<Dtype>*> vecNodes(numberOfNodes);
     Node<Dtype>* curr = nullptr;
-    u_char* nodeData = nullptr;
+    u_int8_t* nodeData = nullptr;
 
     for(size_t x = 0; x < numberOfNodes; x++)
     {
@@ -1228,7 +1228,7 @@ void KdTree<Dtype>::unserialize(u_char* data)
 
         }
 
-        nodeData = new u_char[nodeSize];
+        nodeData = new u_int8_t[nodeSize];
         memcpy(nodeData, data + total, nodeSize);
         total += nodeSize;
 
@@ -1238,8 +1238,8 @@ void KdTree<Dtype>::unserialize(u_char* data)
 
     }
 
-    u_char* dataset_char = new u_char[datasetSize],
-            *pivot_char = new u_char[pivotSize];
+    u_int8_t* dataset_char = new u_int8_t[datasetSize],
+            *pivot_char = new u_int8_t[pivotSize];
 
     memcpy(dataset_char, data + total, datasetSize);
     total += datasetSize;
@@ -1316,7 +1316,7 @@ void KdTree<Dtype>::saveToFile()
 
     std::ofstream file(fileName, std::ios::out | std::ios::binary);
 
-    u_char* seri = new u_char[sizeof(u_int32_t) + getSerializedSize()];
+    u_int8_t* seri = new u_int8_t[sizeof(u_int32_t) + getSerializedSize()];
     u_int32_t size = getSerializedSize();
     memcpy(seri, &size, sizeof(u_int32_t));
     memcpy(seri + sizeof(u_int32_t), serialize(), size);
@@ -1335,14 +1335,14 @@ void KdTree<Dtype>::loadFromFile(std::string fileName)
 
     std::ifstream file(fileName, std::ios::in | std::ios::binary);
 
-    u_char* seri = new u_char[sizeof(u_int32_t)];
+    u_int8_t* seri = new u_int8_t[sizeof(u_int32_t)];
     u_int32_t size;
 
     file.read((char*)seri, sizeof(u_int32_t));
 
     memcpy(&size, seri, sizeof(u_int32_t));
 
-    u_char* data = new u_char[size + sizeof(u_int32_t)];
+    u_int8_t* data = new u_int8_t[size + sizeof(u_int32_t)];
 
     file.seekg(0);
     file.read((char *)data, size + sizeof(u_int32_t));

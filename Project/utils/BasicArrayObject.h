@@ -338,7 +338,7 @@ class BasicArrayObject{
         * @deprecated This method is deprecated. Use serialize() instead.
         * @copydoc serialize().
         */
-        const u_char *Serialize(){
+        const u_int8_t *Serialize(){
 
             return serialize();
         }
@@ -406,16 +406,16 @@ class BasicArrayObject{
         * @brief This method is deprecated, but still usefull for arboretum
         * template functions.
         * @deprecated This method is deprecated.
-        * Use unserialize(const u_char *dataIn, u_int32_t dataSize) instead.
-        * @copydoc unserialize(const u_char *dataIn, size_t dataSize).
+        * Use unserialize(const u_int8_t *dataIn, u_int32_t dataSize) instead.
+        * @copydoc unserialize(const u_int8_t *dataIn, size_t dataSize).
         */
-        void Unserialize(const u_char *dataIn, size_t dataSize = 0){
+        void Unserialize(const u_int8_t *dataIn, size_t dataSize = 0){
 
             unserialize(dataIn, dataSize);
         }
 
         /**
-        * @copydoc unserialize(const u_char *dataIn, size_t dataSize).
+        * @copydoc unserialize(const u_int8_t *dataIn, size_t dataSize).
         */
         void unserializeFromString(std::string dataIn){
 
@@ -484,10 +484,10 @@ class BasicArrayObject{
             return str;
         }
 
-//        const u_char *serialize(){
+//        const u_int8_t *serialize(){
 
 //            if (serialized == NULL){
-//                serialized = new u_char[getSerializedSize()];
+//                serialized = new u_int8_t[getSerializedSize()];
 //                size_t size = getSize();
 //                memcpy(serialized, &OID, sizeof(u_int32_t));
 //                memcpy(serialized + sizeof(u_int32_t), &size, sizeof(size_t));
@@ -498,7 +498,7 @@ class BasicArrayObject{
 //            return serialized;
 //        }
 
-//        void unserialize(const u_char *dataIn, size_t dataSize = 0){
+//        void unserialize(const u_int8_t *dataIn, size_t dataSize = 0){
 
 ////            DType *d = 0;
 //            size_t size_vector;

@@ -16,6 +16,9 @@ int main(int argc, char *argv[])
     DistanceFunction<Instance>* df = new EuclideanDistance<Instance>();
     Pivot* pvt = new RandomPivots(dataset, 2);
 
+    //512kB/4MB ? Quantos caras posso colocar?
+    //size_of -> 01 id, d dimensões (xkB) -> para 01 si
+    //Logo, x si para 512kB
     OmniKdTree<double> omni = OmniKdTree<double>(dataset, df, pvt, 10);
     size_t k = 5;
 
@@ -45,7 +48,7 @@ int main(int argc, char *argv[])
 
 
     std::vector<PairResult> ans;
-    omni.knn(dataset, dataset->getInstance(317), k, ans);
+    omni.knn(dataset, dataset->getInstance(0), k, ans);
     cout << "\n\n\nDISK = " << omni.getDiskAccess() << endl;
 
     cout << "\n\n\n\nQUERY ANS = ";
@@ -56,7 +59,7 @@ int main(int argc, char *argv[])
 
     std::vector<PairResult> ss;
     for(size_t x = 0; x < dataset->getCardinality(); x++)
-        ss.push_back(PairResult(x, df->getDistance(*dataset->getInstance(x), *dataset->getInstance(317))));
+        ss.push_back(PairResult(x, df->getDistance(*dataset->getInstance(x), *dataset->getInstance(0))));
     std::sort(ss.begin(), ss.end(), [](PairResult a, PairResult b){
         return a.distance < b.distance;
     });

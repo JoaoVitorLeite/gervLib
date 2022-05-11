@@ -205,10 +205,7 @@ double DistanceBrowsing::maxDist(Instance* sq, std::vector<DynamicArray<double>>
             answer = std::min(answer, sq->get(x) + std::abs(bounds[x].array[1]));
         }
     }
-
     return answer;
-
-
 }
 
 
