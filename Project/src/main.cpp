@@ -17,9 +17,15 @@ int main(int argc, char *argv[])
     //512kb = 5120 si
     //4MB = 40000 si
 
-//    Dataset* dataset = new Dataset((new Dataset("../datasets/ulcer_SPP.csv", ","))->sample(1000, false), 1000, 12);
-//    DistanceFunction<Instance>* df = new EuclideanDistance<Instance>();
-//    Pivot* pvt = new RandomPivots(dataset, 2);
+    Dataset* dataset = new Dataset((new Dataset("../datasets/ulcer_SPP.csv", ","))->sample(1000, false), 1000, 12);
+    DistanceFunction<Instance>* df = new EuclideanDistance<Instance>();
+    Pivot* pvt = new RandomPivots(dataset, 2);
+    Instance inst = Instance(1, 2);
+    inst.set(0, df->getDistance(*dataset->getInstance(0), *pvt->getPivot(0)));
+    inst.set(0, df->getDistance(*dataset->getInstance(0), *pvt->getPivot(0)));
+
+    cout << sizeof(inst) << endl;
+
 
 //    //512kB/4MB ? Quantos caras posso colocar?
 //    //size_of -> 01 id, d dimensões (xkB) -> para 01 si
