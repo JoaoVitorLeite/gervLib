@@ -577,17 +577,17 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
     Node<Dtype>* node = nullptr;
     Partition<Dtype> partition;
 
-    std::cout << sq_->toString() << "\n\n";
+    //std::cout << sq_->toString() << "\n\n";
 
-    int i = 0;
+    //int i = 0;
 
     while(!pqPartition.empty() || pqCandidates.size() > 0)
     {
 
-        std::cout << "\n\n-------------------ITERACAO WHILE " << i << "\n\n";
+        //std::cout << "\n\n-------------------ITERACAO WHILE " << i << "\n\n";
 
-        std::cout << "PARTITION MIN = " << pqPartition.top().min << std::endl;
-        std::cout << "DIST (query, pqCandidates.top) = " << (pqCandidates.empty() ? -1 : df->getDistance(*query, *train->getInstance(pqCandidates.top().index))) << std::endl;
+        //std::cout << "PARTITION MIN = " << pqPartition.top().min << std::endl;
+        //std::cout << "DIST (query, pqCandidates.top) = " << (pqCandidates.empty() ? -1 : df->getDistance(*query, *train->getInstance(pqCandidates.top().index))) << std::endl;
 
         if(pqCandidates.size() == 0)
         {
@@ -596,7 +596,7 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
             node = partition.node;
             pqPartition.pop();
 
-            std::cout << "POP NODE ID = " << node->getNodeID() << "\n\n";
+            //std::cout << "POP NODE ID = " << node->getNodeID() << "\n\n";
 
             if(node->isLeafNode())
             {
@@ -604,12 +604,12 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
                 Dataset* dataLeafNode = readLeafNode((LeafNode<Dtype>*)node);
                 incrementDiskAccess();
 
-                std::cout << "ID LEAF NODE = " << node->getNodeID() << std::endl;
+                //std::cout << "ID LEAF NODE = " << node->getNodeID() << std::endl;
 
                 for(size_t x = 0; x < dataLeafNode->getCardinality(); x++)
                 {
 
-                    std::cout << dataLeafNode->getInstance(x)->getOID() << " / " << df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID())) << std::endl;
+                    //std::cout << dataLeafNode->getInstance(x)->getOID() << " / " << df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID())) << std::endl;
                     pqCandidates.push(PairResult(dataLeafNode->getInstance(x)->getOID(), df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID()))));
 
                 }
@@ -620,15 +620,15 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
             else
             {
 
-                std::cout << "\nDIST BR = " << node->getLeft()->getNodeID() << " / " << node->getLeft()->showBounds() << std::endl;
+                //std::cout << "\nDIST BR = " << node->getLeft()->getNodeID() << " / " << node->getLeft()->showBounds() << std::endl;
                 double minL = distanceBrowsing->minDist(sq_, node->getLeft()->getBoundary());
                 double maxL = distanceBrowsing->maxDist(sq_, node->getLeft()->getBoundary());
-                std::cout << "DIST BR = " << node->getRight()->getNodeID() << " / " << node->getRight()->showBounds() << std::endl;
+                //std::cout << "DIST BR = " << node->getRight()->getNodeID() << " / " << node->getRight()->showBounds() << std::endl;
                 double minR = distanceBrowsing->minDist(sq_, node->getRight()->getBoundary());
                 double maxR = distanceBrowsing->maxDist(sq_, node->getRight()->getBoundary());
 
-                std::cout << "DIR = " << node->getLeft()->getNodeID() << " / " << minL << " / " << maxL << std::endl;
-                std::cout << "DIR = " << node->getRight()->getNodeID() << " / " << minR << " / " << maxR << std::endl;
+                //std::cout << "DIR = " << node->getLeft()->getNodeID() << " / " << minL << " / " << maxL << std::endl;
+                //std::cout << "DIR = " << node->getRight()->getNodeID() << " / " << minR << " / " << maxR << std::endl;
                 pqPartition.push(Partition<Dtype>(node->getLeft(), minL, maxL));
                 pqPartition.push(Partition<Dtype>(node->getRight(), minR, maxR));
 
@@ -641,7 +641,7 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
             node = pqPartition.top().node;
             pqPartition.pop();
 
-            std::cout << "POP NODE ID = " << node->getNodeID() << std::endl;
+            //std::cout << "POP NODE ID = " << node->getNodeID() << std::endl;
 
             if(node->isLeafNode())
             {
@@ -649,12 +649,12 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
                 Dataset* dataLeafNode = readLeafNode((LeafNode<Dtype>*)node);
                 incrementDiskAccess();
 
-                std::cout << "ID LEAF NODE = " << node->getNodeID() << std::endl;
+                //std::cout << "ID LEAF NODE = " << node->getNodeID() << std::endl;
 
                 for(size_t x = 0; x < dataLeafNode->getCardinality(); x++)
                 {
 
-                    std::cout << dataLeafNode->getInstance(x)->getOID() << " / " << df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID())) << std::endl;
+                    //std::cout << dataLeafNode->getInstance(x)->getOID() << " / " << df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID())) << std::endl;
                     pqCandidates.push(PairResult(dataLeafNode->getInstance(x)->getOID(), df->getDistance(*query, *train->getInstance(dataLeafNode->getInstance(x)->getOID()))));
 
                 }
@@ -665,15 +665,15 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
             else
             {
 
-                std::cout << "\nDIST BR = " << node->getLeft()->getNodeID() << " / " << node->getLeft()->showBounds() << std::endl;
+                //std::cout << "\nDIST BR = " << node->getLeft()->getNodeID() << " / " << node->getLeft()->showBounds() << std::endl;
                 double minL = distanceBrowsing->minDist(sq_, node->getLeft()->getBoundary());
                 double maxL = distanceBrowsing->maxDist(sq_, node->getLeft()->getBoundary());
-                std::cout << "DIST BR = " << node->getRight()->getNodeID() << " / " << node->getRight()->showBounds() << std::endl;
+                //std::cout << "DIST BR = " << node->getRight()->getNodeID() << " / " << node->getRight()->showBounds() << std::endl;
                 double minR = distanceBrowsing->minDist(sq_, node->getRight()->getBoundary());
                 double maxR = distanceBrowsing->maxDist(sq_, node->getRight()->getBoundary());
 
-                std::cout << "DIR = " << node->getLeft()->getNodeID() << " / " << minL << " / " << maxL << std::endl;
-                std::cout << "DIR = " << node->getRight()->getNodeID() << " / " << minR << " / " << maxR << std::endl;
+                //std::cout << "DIR = " << node->getLeft()->getNodeID() << " / " << minL << " / " << maxL << std::endl;
+                //std::cout << "DIR = " << node->getRight()->getNodeID() << " / " << minR << " / " << maxR << std::endl;
                 pqPartition.push(Partition<Dtype>(node->getLeft(), minL, maxL));
                 pqPartition.push(Partition<Dtype>(node->getRight(), minR, maxR));
 
@@ -683,12 +683,12 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
         else
         {
 
-            std::cout << "ADICIONA ELEMENTO NA RESPOSTA" << std::endl;
+            //std::cout << "ADICIONA ELEMENTO NA RESPOSTA" << std::endl;
             if(!pqAns.empty() && !pqCandidates.empty() && pqAns.size() >= k && pqCandidates.top().distance > pqAns.top().distance)
             {
 
-                std::cout << "DEVERIA TERMINAR AQUI";
-                //break;
+                //std::cout << "DEVERIA TERMINAR AQUI";
+                break;
 
             }
 
@@ -704,32 +704,32 @@ void OmniKdTree<Dtype>::knn(Dataset* train, Instance* query, size_t k, std::vect
 
         }
 
-        std::cout << "\nPQ PARTITION = ";
-        for(Partition<Dtype> pt : dequeueInOrder(pqPartition))
-        {
+//        std::cout << "\nPQ PARTITION = ";
+//        for(Partition<Dtype> pt : dequeueInOrder(pqPartition))
+//        {
 
-            std::cout << pt.node->getNodeID() << ",";
+//            std::cout << pt.node->getNodeID() << ",";
 
-        }
+//        }
 
-        std::cout << "\nPQ CANDIDATES = ";
-        for(PairResult pt : dequeueInOrder(pqCandidates))
-        {
+//        std::cout << "\nPQ CANDIDATES = ";
+//        for(PairResult pt : dequeueInOrder(pqCandidates))
+//        {
 
-            std::cout << pt.index << ",";
+//            std::cout << pt.index << ",";
 
-        }
+//        }
 
-        std::cout << "\nPQ ANS = ";
-        for(PairResult pt : dequeueInOrder(pqAns))
-        {
+//        std::cout << "\nPQ ANS = ";
+//        for(PairResult pt : dequeueInOrder(pqAns))
+//        {
 
-            std::cout << pt.index << ",";
+//            std::cout << pt.index << ",";
 
-        }
+//        }
 
 
-        i++;
+//        i++;
     }
 
     ans = dequeueInOrder(pqAns);

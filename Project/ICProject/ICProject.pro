@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-   # ../UnitTest \
+    ../UnitTest \
     ../src/ProjectJoao.pro \
 

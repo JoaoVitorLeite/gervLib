@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'TestGnat.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.1)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.0.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,8 +12,8 @@
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'TestGnat.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.1. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.0.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,32 +22,29 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TestGnat_t {
-    QByteArrayData data[16];
+    const uint offsetsAndSize[32];
     char stringdata0[114];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_TestGnat_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(offsetof(qt_meta_stringdata_TestGnat_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_TestGnat_t qt_meta_stringdata_TestGnat = {
     {
-QT_MOC_LITERAL(0, 0, 8), // "TestGnat"
-QT_MOC_LITERAL(1, 9, 12), // "initTestCase"
-QT_MOC_LITERAL(2, 22, 0), // ""
-QT_MOC_LITERAL(3, 23, 15), // "cleanupTestCase"
-QT_MOC_LITERAL(4, 39, 5), // "test1"
-QT_MOC_LITERAL(5, 45, 5), // "test2"
-QT_MOC_LITERAL(6, 51, 5), // "test3"
-QT_MOC_LITERAL(7, 57, 5), // "test4"
-QT_MOC_LITERAL(8, 63, 5), // "test5"
-QT_MOC_LITERAL(9, 69, 5), // "test6"
-QT_MOC_LITERAL(10, 75, 5), // "test7"
-QT_MOC_LITERAL(11, 81, 5), // "test8"
-QT_MOC_LITERAL(12, 87, 5), // "test9"
-QT_MOC_LITERAL(13, 93, 6), // "test10"
-QT_MOC_LITERAL(14, 100, 6), // "test11"
-QT_MOC_LITERAL(15, 107, 6) // "test12"
+QT_MOC_LITERAL(0, 8), // "TestGnat"
+QT_MOC_LITERAL(9, 12), // "initTestCase"
+QT_MOC_LITERAL(22, 0), // ""
+QT_MOC_LITERAL(23, 15), // "cleanupTestCase"
+QT_MOC_LITERAL(39, 5), // "test1"
+QT_MOC_LITERAL(45, 5), // "test2"
+QT_MOC_LITERAL(51, 5), // "test3"
+QT_MOC_LITERAL(57, 5), // "test4"
+QT_MOC_LITERAL(63, 5), // "test5"
+QT_MOC_LITERAL(69, 5), // "test6"
+QT_MOC_LITERAL(75, 5), // "test7"
+QT_MOC_LITERAL(81, 5), // "test8"
+QT_MOC_LITERAL(87, 5), // "test9"
+QT_MOC_LITERAL(93, 6), // "test10"
+QT_MOC_LITERAL(100, 6), // "test11"
+QT_MOC_LITERAL(107, 6) // "test12"
 
     },
     "TestGnat\0initTestCase\0\0cleanupTestCase\0"
@@ -59,7 +56,7 @@ QT_MOC_LITERAL(15, 107, 6) // "test12"
 static const uint qt_meta_data_TestGnat[] = {
 
  // content:
-       8,       // revision
+       9,       // revision
        0,       // classname
        0,    0, // classinfo
       14,   14, // methods
@@ -69,21 +66,21 @@ static const uint qt_meta_data_TestGnat[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    0,   84,    2, 0x08 /* Private */,
-       3,    0,   85,    2, 0x08 /* Private */,
-       4,    0,   86,    2, 0x08 /* Private */,
-       5,    0,   87,    2, 0x08 /* Private */,
-       6,    0,   88,    2, 0x08 /* Private */,
-       7,    0,   89,    2, 0x08 /* Private */,
-       8,    0,   90,    2, 0x08 /* Private */,
-       9,    0,   91,    2, 0x08 /* Private */,
-      10,    0,   92,    2, 0x08 /* Private */,
-      11,    0,   93,    2, 0x08 /* Private */,
-      12,    0,   94,    2, 0x08 /* Private */,
-      13,    0,   95,    2, 0x08 /* Private */,
-      14,    0,   96,    2, 0x08 /* Private */,
-      15,    0,   97,    2, 0x08 /* Private */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   98,    2, 0x08,    0 /* Private */,
+       3,    0,   99,    2, 0x08,    1 /* Private */,
+       4,    0,  100,    2, 0x08,    2 /* Private */,
+       5,    0,  101,    2, 0x08,    3 /* Private */,
+       6,    0,  102,    2, 0x08,    4 /* Private */,
+       7,    0,  103,    2, 0x08,    5 /* Private */,
+       8,    0,  104,    2, 0x08,    6 /* Private */,
+       9,    0,  105,    2, 0x08,    7 /* Private */,
+      10,    0,  106,    2, 0x08,    8 /* Private */,
+      11,    0,  107,    2, 0x08,    9 /* Private */,
+      12,    0,  108,    2, 0x08,   10 /* Private */,
+      13,    0,  109,    2, 0x08,   11 /* Private */,
+      14,    0,  110,    2, 0x08,   12 /* Private */,
+      15,    0,  111,    2, 0x08,   13 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -108,7 +105,7 @@ void TestGnat::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<TestGnat *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
         case 0: _t->initTestCase(); break;
         case 1: _t->cleanupTestCase(); break;
@@ -127,15 +124,21 @@ void TestGnat::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         default: ;
         }
     }
-    Q_UNUSED(_a);
+    (void)_a;
 }
 
-QT_INIT_METAOBJECT const QMetaObject TestGnat::staticMetaObject = { {
+const QMetaObject TestGnat::staticMetaObject = { {
     QMetaObject::SuperData::link<QObject::staticMetaObject>(),
-    qt_meta_stringdata_TestGnat.data,
+    qt_meta_stringdata_TestGnat.offsetsAndSize,
     qt_meta_data_TestGnat,
     qt_static_metacall,
     nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_TestGnat_t
+
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+
+
+>,
     nullptr
 } };
 
@@ -164,7 +167,7 @@ int TestGnat::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 14)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 14;
     }
     return _id;

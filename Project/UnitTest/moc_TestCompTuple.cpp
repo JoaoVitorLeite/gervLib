@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'TestCompTuple.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.1)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.0.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,8 +12,8 @@
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'TestCompTuple.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.1. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.0.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,29 +22,26 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TestCompTuple_t {
-    QByteArrayData data[13];
+    const uint offsetsAndSize[26];
     char stringdata0[98];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_TestCompTuple_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(offsetof(qt_meta_stringdata_TestCompTuple_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_TestCompTuple_t qt_meta_stringdata_TestCompTuple = {
     {
-QT_MOC_LITERAL(0, 0, 13), // "TestCompTuple"
-QT_MOC_LITERAL(1, 14, 12), // "initTestCase"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 15), // "cleanupTestCase"
-QT_MOC_LITERAL(4, 44, 5), // "test1"
-QT_MOC_LITERAL(5, 50, 5), // "test2"
-QT_MOC_LITERAL(6, 56, 5), // "test3"
-QT_MOC_LITERAL(7, 62, 5), // "test4"
-QT_MOC_LITERAL(8, 68, 5), // "test5"
-QT_MOC_LITERAL(9, 74, 5), // "test6"
-QT_MOC_LITERAL(10, 80, 5), // "test7"
-QT_MOC_LITERAL(11, 86, 5), // "test8"
-QT_MOC_LITERAL(12, 92, 5) // "test9"
+QT_MOC_LITERAL(0, 13), // "TestCompTuple"
+QT_MOC_LITERAL(14, 12), // "initTestCase"
+QT_MOC_LITERAL(27, 0), // ""
+QT_MOC_LITERAL(28, 15), // "cleanupTestCase"
+QT_MOC_LITERAL(44, 5), // "test1"
+QT_MOC_LITERAL(50, 5), // "test2"
+QT_MOC_LITERAL(56, 5), // "test3"
+QT_MOC_LITERAL(62, 5), // "test4"
+QT_MOC_LITERAL(68, 5), // "test5"
+QT_MOC_LITERAL(74, 5), // "test6"
+QT_MOC_LITERAL(80, 5), // "test7"
+QT_MOC_LITERAL(86, 5), // "test8"
+QT_MOC_LITERAL(92, 5) // "test9"
 
     },
     "TestCompTuple\0initTestCase\0\0cleanupTestCase\0"
@@ -56,7 +53,7 @@ QT_MOC_LITERAL(12, 92, 5) // "test9"
 static const uint qt_meta_data_TestCompTuple[] = {
 
  // content:
-       8,       // revision
+       9,       // revision
        0,       // classname
        0,    0, // classinfo
       11,   14, // methods
@@ -66,18 +63,18 @@ static const uint qt_meta_data_TestCompTuple[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    0,   69,    2, 0x08 /* Private */,
-       3,    0,   70,    2, 0x08 /* Private */,
-       4,    0,   71,    2, 0x08 /* Private */,
-       5,    0,   72,    2, 0x08 /* Private */,
-       6,    0,   73,    2, 0x08 /* Private */,
-       7,    0,   74,    2, 0x08 /* Private */,
-       8,    0,   75,    2, 0x08 /* Private */,
-       9,    0,   76,    2, 0x08 /* Private */,
-      10,    0,   77,    2, 0x08 /* Private */,
-      11,    0,   78,    2, 0x08 /* Private */,
-      12,    0,   79,    2, 0x08 /* Private */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   80,    2, 0x08,    0 /* Private */,
+       3,    0,   81,    2, 0x08,    1 /* Private */,
+       4,    0,   82,    2, 0x08,    2 /* Private */,
+       5,    0,   83,    2, 0x08,    3 /* Private */,
+       6,    0,   84,    2, 0x08,    4 /* Private */,
+       7,    0,   85,    2, 0x08,    5 /* Private */,
+       8,    0,   86,    2, 0x08,    6 /* Private */,
+       9,    0,   87,    2, 0x08,    7 /* Private */,
+      10,    0,   88,    2, 0x08,    8 /* Private */,
+      11,    0,   89,    2, 0x08,    9 /* Private */,
+      12,    0,   90,    2, 0x08,   10 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -99,7 +96,7 @@ void TestCompTuple::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<TestCompTuple *>(_o);
-        Q_UNUSED(_t)
+        (void)_t;
         switch (_id) {
         case 0: _t->initTestCase(); break;
         case 1: _t->cleanupTestCase(); break;
@@ -115,15 +112,21 @@ void TestCompTuple::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         default: ;
         }
     }
-    Q_UNUSED(_a);
+    (void)_a;
 }
 
-QT_INIT_METAOBJECT const QMetaObject TestCompTuple::staticMetaObject = { {
+const QMetaObject TestCompTuple::staticMetaObject = { {
     QMetaObject::SuperData::link<QObject::staticMetaObject>(),
-    qt_meta_stringdata_TestCompTuple.data,
+    qt_meta_stringdata_TestCompTuple.offsetsAndSize,
     qt_meta_data_TestCompTuple,
     qt_static_metacall,
     nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_TestCompTuple_t
+
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+
+
+>,
     nullptr
 } };
 
@@ -152,7 +155,7 @@ int TestCompTuple::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 11)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 11;
     }
     return _id;
