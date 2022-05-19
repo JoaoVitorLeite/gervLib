@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     inst.set(0, df->getDistance(*dataset->getInstance(0), *pvt->getPivot(0)));
     inst.set(0, df->getDistance(*dataset->getInstance(0), *pvt->getPivot(0)));
 
-    cout << sizeof(inst) << endl;
+    cout << sizeof(size_t) << endl;
 
 
 //    //512kB/4MB ? Quantos caras posso colocar?

@@ -8,11 +8,11 @@ separator_test=","
 distance_function="EUCLIDEAN"
 pivot_type=("RANDOM" "GNAT" "CONVEX" "KMEDOIDS" "MAXSEPARETED" "MAXVARIANCE" "SELECTION" "PCA" "SSS")
 sample_size=(1.0 1.0 1.0 0.2 1.0 0.3 0.3 0.01 0.03)
-num_pivots=2
+num_pivots=4
 seed=($(shuf -i 0-500000 -n 9))
-k_max=5
+k_max=100
 num_query=1000
-num_per_leaf=4931 #only omni,kdtree
+num_per_leaf=400 #only omni,kdtree
 path_save_results="../results/"
 
 mkdir -p ../omni/omni_files/
@@ -27,5 +27,5 @@ make
 
 for((i=0; i<9; i++));
 do
-    nohup ./ProjectJoao -INDEX ${index} -DATASET_TRAIN ${dataset_train} -DATASET_TRAIN_SEPARATOR ${separator_train} -DATASET_TEST ${dataset_test} -DATASET_TEST_SEPARATOR ${separator_test} -DISTANCE_FUNCTION ${distance_function} -PIVOT_TYPE ${pivot_type[$i]} -SAMPLE_SIZE_PIVOT ${sample_size[$i]} -NUM_PIVOTS ${num_pivots} -SEED ${seed[$i]} -K_MAX ${k_max} -PATH_SAVE_RESULTS ${path_save_results} -NUM_PER_LEAF ${num_per_leaf} -NUM_QUERY ${num_query} &
+    nohup ./ProjectJoao -INDEX ${index} -DATASET_TRAIN ${dataset_train} -DATASET_TRAIN_SEPARATOR ${separator_train} -DATASET_TEST ${dataset_test} -DATASET_TEST_SEPARATOR ${separator_test} -DISTANCE_FUNCTION ${distance_function} -PIVOT_TYPE ${pivot_type[$i]} -SAMPLE_SIZE_PIVOT ${sample_size[$i]} -NUM_PIVOTS ${num_pivots} -SEED ${seed[$i]} -K_MAX ${k_max} -PATH_SAVE_RESULTS ${path_save_results} -NUM_PER_LEAF ${num_per_leaf} &
 done
