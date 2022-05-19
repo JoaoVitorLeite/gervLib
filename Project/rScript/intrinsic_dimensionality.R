@@ -1,20 +1,12 @@
 args <- commandArgs(trailingOnly = TRUE)
 
-#numberOfElements = "all" or number
-intrinsic_dim <- function(datasetPath, separator, numberOfElements, distanceFunction, numberOfThreads=12){
+intrinsic_dim <- function(datasetPath, separator, distanceFunction){
 
   library("parallelDist")
   
-  data <- read.csv(datasetPath, sep = separator)
-  
-  if(numberOfElements != "all"){
-    
-    num <- min(as.numeric(numberOfElements), nrow(data))
-    data <- data[0:num,]
-    
-  }
-  
-  mat <- as.matrix(parallelDist(as.matrix(data), method = distanceFunction, threads=as.numeric(numberOfThreads)))
+  df <- read.csv(datasetPath, sep = separator, header=F)
+
+  mat <- parallelDist(as.matrix(df), method = distanceFunction, threads=12)
   
   mean_values <- mean(mat)
   std_values <- sd(mat)
@@ -32,12 +24,4 @@ intrinsic_dim <- function(datasetPath, separator, numberOfElements, distanceFunc
   
 }
 
-if(length(args) > 4){
-
-  intrinsic_dim(args[1], args[2], args[3], args[4], args[5])
-
-}else{
-
-  intrinsic_dim(args[1], args[2], args[3], args[4])
-
-}
+intrinsic_dim(args[1], args[2], args[3])
