@@ -11,15 +11,7 @@ intrinsic_dim <- function(datasetPath, separator, distanceFunction){
   mean_values <- mean(mat)
   std_values <- sd(mat)
   ans <- (mean_values*mean_values)/(2*std_values*std_values)
-  
-  if(ans < 2){
-    ans <- 2
-  }
 
-  if(ans > ncol(data)){
-    ans <- ncol(data)
-  }
-  
   return(ans)
   
 }
