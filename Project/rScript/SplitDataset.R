@@ -1,3 +1,4 @@
+args <- commandArgs(trailingOnly = TRUE)
 
 #Split 0.9/0.1 => Train/Test
 split <- function(pathOfDataset, separator, seed = 100, trainFileName, testFileName)
@@ -14,3 +15,12 @@ split <- function(pathOfDataset, separator, seed = 100, trainFileName, testFileN
   
 }
 
+if(length(args) == 5){
+  
+  sample_dataset(args[1], args[2], args[3], args[4], args[5])
+  
+} else if(length(args) == 4){
+  
+  sample_dataset(args[1], args[2], 100, args[3], args[4])
+  
+}
