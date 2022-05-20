@@ -1,18 +1,18 @@
 #!/bin/bash
 
 index="OMNIKDTREE"
-dataset_train="../datasets/train_ulcer_SPP.csv"
+dataset_train="../datasets/train_nasa.csv"
 separator_train=","
-dataset_test="../datasets/test_ulcer_SPP.csv"
+dataset_test="../datasets/test_nasa.csv"
 separator_test=","
 distance_function="EUCLIDEAN"
 pivot_type=("RANDOM" "GNAT" "CONVEX" "KMEDOIDS" "MAXSEPARETED" "MAXVARIANCE" "SELECTION" "PCA" "SSS")
 sample_size=(1.0 1.0 1.0 0.2 1.0 0.3 0.3 0.01 0.03)
-num_pivots=4
+num_pivots=2
 seed=($(shuf -i 0-500000 -n 9))
 k_max=100
 num_query=1000
-num_per_leaf=400 #only omni,kdtree
+num_per_leaf=360 #only omni,kdtree
 path_save_results="../results/"
 
 mkdir -p ../omni/omni_files/
