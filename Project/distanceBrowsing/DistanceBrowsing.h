@@ -129,22 +129,94 @@ double DistanceBrowsing::minDist(Instance* sq, std::vector<DynamicArray<double>>
 //    delete (limTeorico);
 //    delete (f);
 
+    double limInfCase3 = -1.0;
+
+    double limInfCase2 = -1.0;
+
     double answer = -1.0;
 
-    bool within = false;
-    answer = std::numeric_limits<double>::max();
+    bool within = true;
 
-    for(size_t x = 0; ((x < bounds.size()) && (!within)); x++){
-        if(!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x))){
-            answer = std::min(answer, std::abs(sq->get(x) - std::abs(bounds[x].array[0])));
-            answer = std::min(answer, std::abs(sq->get(x) - std::abs(bounds[x].array[1])));
+
+
+
+    for(size_t x = 0; x < bounds.size(); x++){
+
+
+        if (!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x))){
+
+            within = false;
+
+            limInfCase3 = std::max(limInfCase3,
+
+                                   std::min(
+
+                                       std::abs(sq->get(x) - std::abs(bounds[x].array[0])),
+
+                                   std::abs(sq->get(x) - std::abs(bounds[x].array[1]))
+
+                    )
+
+                    );
+
         } else {
-            answer = 0;
-            within = true;
+
+            limInfCase2 = std::min(limInfCase2,
+
+                                   std::min(
+
+                                       std::abs(sq->get(x) - std::abs(bounds[x].array[0])),
+
+                                   std::abs(sq->get(x) - std::abs(bounds[x].array[1]))
+
+                    )
+
+                    );
+
         }
+
     }
 
+
+    if (within){
+
+        answer = 0.0;
+
+    } else {
+
+        if (limInfCase2 != -1.0){
+
+            answer = limInfCase2;
+
+        } else {
+
+            answer = limInfCase3;
+
+        }
+
+    }
+
+
     return answer;
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//    double answer = -1.0;
+
+//    bool within = false;
+//    answer = std::numeric_limits<double>::max();
+
+//    for(size_t x = 0; ((x < bounds.size()) && (!within)); x++){
+//        if(!isInterval(std::abs(bounds[x].array[0]), std::abs(bounds[x].array[1]), sq->get(x))){
+//            answer = std::min(answer, std::abs(sq->get(x) - std::abs(bounds[x].array[0])));
+//            answer = std::min(answer, std::abs(sq->get(x) - std::abs(bounds[x].array[1])));
+//        } else {
+//            answer = 0;
+//            within = true;
+//        }
+//    }
+
+//    return answer;
 }
 
 

@@ -17,10 +17,10 @@ split <- function(pathOfDataset, separator, seed = 100, trainFileName, testFileN
 
 if(length(args) == 5){
   
-  sample_dataset(args[1], args[2], args[3], args[4], args[5])
+  split(args[1], args[2], args[3], args[4], args[5])
   
 } else if(length(args) == 4){
   
-  sample_dataset(args[1], args[2], 100, args[3], args[4])
+  split(args[1], args[2], 100, args[3], args[4])
   
 }
