@@ -1434,42 +1434,4 @@ void KdTree<Dtype>::setDistanceFunction(DistanceFunction<Instance>* distanceFunc
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif // KDTREE_H
