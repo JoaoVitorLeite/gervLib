@@ -4,7 +4,7 @@ args <- commandArgs(trailingOnly = TRUE)
 split <- function(pathOfDataset, separator, seed = 100, trainFileName, testFileName)
 {
 
-  data <- read.csv(pathOfDataset, sep = separator)
+  data <- read.csv(pathOfDataset, sep = separator, header=F)
   set.seed(seed) 
   sample <- sample.int(n = nrow(data), size = floor(.9*nrow(data)), replace = F)
   train <- data[sample, ]
